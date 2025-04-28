@@ -45,9 +45,9 @@ except (ImportError, AssertionError):
 
 from ultralytics.utils.checks import check_requirements
 
-from utils import TryExcept, emojis
-from utils.downloads import curl_download, gsutil_getsize
-from utils.metrics import box_iou, fitness
+from yolov5.utils import TryExcept, emojis
+from yolov5.utils.downloads import curl_download, gsutil_getsize
+from yolov5.utils.metrics import box_iou, fitness
 
 FILE = Path(__file__).resolve()
 ROOT = FILE.parents[1]  # YOLOv5 root directory
@@ -1125,7 +1125,7 @@ def strip_optimizer(f="best.pt", s=""):
     Strips optimizer and optionally saves checkpoint to finalize training; arguments are file path 'f' and save path
     's'.
 
-    Example: from utils.general import *; strip_optimizer()
+    Example: from yolov5.utils.general import *; strip_optimizer()
     """
     x = torch.load(f, map_location=torch.device("cpu"))
     if x.get("ema"):

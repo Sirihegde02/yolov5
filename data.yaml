@@ -1,0 +1,5 @@
+train: C:/Users/Siri Hegde/Desktop/object-detection-api/images/train
+val: C:/Users/Siri Hegde/Desktop/object-detection-api/images/train
+
+nc: 2
+names: ['pistol', 'knife']
